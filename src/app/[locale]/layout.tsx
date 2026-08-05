@@ -1,5 +1,8 @@
+import "../globals.css";
 import type { Metadata } from "next";
 import type { Params } from "@/types/docs";
+import type { ReactNode } from "react";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({
     params
@@ -27,11 +30,27 @@ export async function generateMetadata({
     }
 }
 
-export default async function Layout() {
+export default async function Layout({
+    params,
+    children
+} : {
+    params: Params,
+    children: ReactNode
+}) {
+    const { locale } = await params;
+    const locales = ["pt", "en", "es"] as const;
+
+    if (!locales.includes(locale)) {
+        notFound();
+    };
+    
     return (
         <html
             lang={locale}
         >
+            <body>
+                {children}
+            </body>
         </html>
     )
 };
