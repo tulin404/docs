@@ -3,6 +3,18 @@ import type { Metadata } from "next";
 import type { Params } from "@/types/docs";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
+import { Inter, Outfit } from "next/font/google";
+
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-primary",
+});
+
+const outfit = Outfit({
+    subsets: ["latin"],
+    variable: "--font-secondary",
+});
+
 
 export async function generateMetadata({
     params
@@ -37,7 +49,8 @@ export default async function Layout({
     params: Params,
     children: ReactNode
 }) {
-    const { locale } = await params;
+    const { locale, slug } = await params;
+    console.log(slug);
     const locales = ["pt", "en", "es"] as const;
 
     if (!locales.includes(locale)) {
@@ -47,6 +60,7 @@ export default async function Layout({
     return (
         <html
             lang={locale}
+            className={`${inter.variable} ${outfit.variable}`}
         >
             <body>
                 {children}

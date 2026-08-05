@@ -11,6 +11,6 @@ export default async function Page({
     console.log(slug);
 
     return (
-        <div className="text-red-500">Hey</div>
+        <div className="text-red-500 font-primary">Hey</div>
     )
 };

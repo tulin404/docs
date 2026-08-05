@@ -67,4 +67,8 @@
     --color-border: var(--border);
     --color-border-hover: var(--border-hover);
     --color-border-focus: var(--border-focus);
+
+    /* Fonts */
+    --font-primary: var(--font-primary), sans-serif;
+    --font-primary: var(--font-secondary), sans-serif;
 }
