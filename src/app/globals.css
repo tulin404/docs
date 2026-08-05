@@ -1,1 +1,70 @@
 @import "tailwindcss";
+
+:root {
+    /* Brand */
+    --primary: #09090b;
+    --primary-hover: #18181b;
+    --primary-active: #27272a;
+    --primary-foreground: #fafafa;
+    
+    /* Layout */
+    --background: #ffffff;
+    --surface: #fafafa;
+    --surface-hover: #f5f5f5;
+    
+    /* Typography */
+    --text: #09090b;
+    --text-muted: #52525b;
+    --text-disabled: #a1a1aa;
+    
+    /* Borders */
+    --border: #e4e4e7;
+    --border-hover: #d4d4d8;
+    --border-focus: #09090b;
+}
+
+.dark {
+    /* Brand */
+    --primary: #fafafa;
+    --primary-hover: #f4f4f5;
+    --primary-active: #e4e4e7;
+    --primary-foreground: #09090b;
+    
+    /* Layout */
+    --background: #09090b;
+    --surface: #111113;
+    --surface-hover: #18181b;
+    
+    /* Typography */
+    --text: #fafafa;
+    --text-muted: #a1a1aa;
+    --text-disabled: #71717a;
+    
+    /* Borders */
+    --border: #27272a;
+    --border-hover: #3f3f46;
+    --border-focus: #fafafa;
+}
+
+@theme inline {
+    /* Brand */
+    --color-primary: var(--primary);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-active: var(--primary-active);
+    --color-primary-foreground: var(--primary-foreground);
+    
+    /* Layout */
+    --color-background: var(--background);
+    --color-surface: var(--surface);
+    --color-surface-hover: var(--surface-hover);
+    
+    /* Typography */
+    --color-text: var(--text);
+    --color-text-muted: var(--text-muted);
+    --color-text-disabled: var(--text-disabled);
+    
+    /* Borders */
+    --color-border: var(--border);
+    --color-border-hover: var(--border-hover);
+    --color-border-focus: var(--border-focus);
+}
