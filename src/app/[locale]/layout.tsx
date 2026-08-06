@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import type { Params } from "@/types/props";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { Inter, Outfit } from "next/font/google";
+import { Geist, Inter } from "next/font/google";
 
-const inter = Inter({
+const geist = Geist({
     subsets: ["latin"],
     variable: "--font-primary",
 });
 
-const outfit = Outfit({
+const inter = Inter({
     subsets: ["latin"],
     variable: "--font-secondary",
 });
@@ -59,7 +59,7 @@ export default async function Layout({
     return (
         <html
             lang={locale}
-            className={`${inter.variable} ${outfit.variable}`}
+            className={`${geist.variable} ${inter.variable} dark`}
         >
             <body>
                 {children}

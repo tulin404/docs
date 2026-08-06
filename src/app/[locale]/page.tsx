@@ -11,6 +11,9 @@ export default async function Page({
     console.log(slug);
 
     return (
-        <div></div>
+        <>
+            <div className="w-10 bg-surface">Nav</div>
+            <div className="w-10 bg-background">Back</div>
+        </>
     )
 };

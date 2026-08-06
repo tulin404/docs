@@ -8,8 +8,8 @@
     --primary-foreground: #fafafa;
 
     /* Layout */
-    --background: #ffffff;
-    --surface: #fafafa;
+    --background: #fafafa;
+    --surface: #ffffff;
     --surface-hover: #f4f4f5;
     --card: #ffffff;
 
@@ -77,6 +77,10 @@
     --color-border: var(--border);
     --color-border-hover: var(--border-hover);
     --color-border-focus: var(--border-focus);
+
+    /* Accent */
+    --color-accent: var(--accent);
+    --color-accent-muted: var(--accent-muted);
 
     /* Fonts */
     --font-primary: var(--font-primary), sans-serif;
