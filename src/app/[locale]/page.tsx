@@ -11,6 +11,6 @@ export default async function Page({
     console.log(slug);
 
     return (
-        
+        <div></div>
     )
 };
