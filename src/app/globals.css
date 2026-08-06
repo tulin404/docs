@@ -146,3 +146,11 @@
     --font-primary: var(--font-primary), sans-serif;
     --font-secondary: var(--font-secondary), sans-serif;
 }
+
+h1, h2, h3 {
+    font-family: var(--font-primary);
+}
+
+body {
+    font-family: var(--font-secondary);
+}

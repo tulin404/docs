@@ -1,18 +1,19 @@
 "use client";
 
+import { Locale } from "@/types/props";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export function NavBar({
+    locale,
     content
 } : {
-    content: any, // eslint-disable-line
+    locale: Locale,
+    content: any // eslint-disable-line
 }) {
-    const pathname = usePathname();
-
     return (
         <Link
-            href="/docs"
+            href={`/${locale}/docs`}
+            className="text-xl"
         >
             Docs
         </Link>
