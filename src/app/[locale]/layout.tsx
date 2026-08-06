@@ -4,6 +4,7 @@ import type { Params } from "@/types/props";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { Geist, Inter } from "next/font/google";
+import { cookies } from "next/headers";
 
 const geist = Geist({
     subsets: ["latin"],
@@ -55,11 +56,14 @@ export default async function Layout({
     if (!locales.includes(locale)) {
         notFound();
     };
-    
+
+    const cookieStore = await cookies();
+    const themeCookie = cookieStore.get("theme")?.value ?? "";
+
     return (
         <html
             lang={locale}
-            className={`${geist.variable} ${inter.variable} dark`}
+            className={`${geist.variable} ${inter.variable} ${themeCookie}`}
         >
             <body>
                 {children}

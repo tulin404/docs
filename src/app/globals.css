@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* THEMES */
+
 :root {
     /* Brand */
     --primary: #18181b;
@@ -26,6 +28,36 @@
     /* Accent */
     --accent: #18181b;
     --accent-muted: #f4f4f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+        /* Brand */
+        --primary: #fafafa;
+        --primary-hover: #e4e4e7;
+        --primary-active: #d4d4d8;
+        --primary-foreground: #18181b;
+    
+        /* Layout */
+        --background: #09090b;
+        --surface: #111113;
+        --surface-hover: #18181b;
+        --card: #111113;
+    
+        /* Typography */
+        --text: #fafafa;
+        --text-muted: #a1a1aa;
+        --text-disabled: #52525b;
+    
+        /* Borders */
+        --border: #27272a;
+        --border-hover: #3f3f46;
+        --border-focus: #fafafa;
+    
+        /* Accent */
+        --accent: #fafafa;
+        --accent-muted: #18181b;
+    }
 }
 
 .dark {
@@ -56,6 +88,33 @@
     --accent-muted: #18181b;
 }
 
+.light {
+    --primary: #18181b;
+    --primary-hover: #27272a;
+    --primary-active: #3f3f46;
+    --primary-foreground: #fafafa;
+
+    /* Layout */
+    --background: #fafafa;
+    --surface: #ffffff;
+    --surface-hover: #f4f4f5;
+    --card: #ffffff;
+
+    /* Typography */
+    --text: #18181b;
+    --text-muted: #71717a;
+    --text-disabled: #a1a1aa;
+
+    /* Borders */
+    --border: #e4e4e7;
+    --border-hover: #d4d4d8;
+    --border-focus: #18181b;
+
+    /* Accent */
+    --accent: #18181b;
+    --accent-muted: #f4f4f5;
+}
+
 @theme inline {
     /* Brand */
     --color-primary: var(--primary);
@@ -67,6 +126,7 @@
     --color-background: var(--background);
     --color-surface: var(--surface);
     --color-surface-hover: var(--surface-hover);
+    --color-card: var(--card);
     
     /* Typography */
     --color-text: var(--text);
@@ -84,5 +144,5 @@
 
     /* Fonts */
     --font-primary: var(--font-primary), sans-serif;
-    --font-primary: var(--font-secondary), sans-serif;
+    --font-secondary: var(--font-secondary), sans-serif;
 }
