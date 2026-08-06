@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root:not(.light) {
+    :root:not(.light):not(.dark) {
         /* Brand */
         --primary: #fafafa;
         --primary-hover: #e4e4e7;
@@ -57,6 +57,14 @@
         /* Accent */
         --accent: #fafafa;
         --accent-muted: #18181b;
+
+        & .logo-light {
+            display: none;
+        }
+
+        & .logo-dark {
+            display: block;
+        }
     }
 }
 
@@ -153,4 +161,20 @@ h1, h2, h3 {
 
 body {
     font-family: var(--font-secondary);
+}
+
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+.dark .logo-light {
+  display: none;
+}
+
+.dark .logo-dark {
+  display: block;
 }
