@@ -1,9 +1,6 @@
-"use client";
-
 import { Locale } from "@/types/props";
 import Link from "next/link";
 import Image from "next/image";
-import logoDark from "/tree-"
 
 export function NavBar({
     locale,
@@ -13,24 +10,27 @@ export function NavBar({
     content: any // eslint-disable-line
 }) {
     return (
-        <nav className="bg-surface">
+        <nav className="bg-background border-b-2 border-border">
             {/* NAV LEFT */}
             <div className="flex">
                 <div>
                     <Image
-                        src="/tree-light.png"
+                        src="/logo-light.png"
                         className="logo-light"
-                        width={100}
-                        height={100}
+                        width={72}
+                        height={72}
                         alt="Logo"
+                        loading="eager"
+                        
                     />
                     
                     <Image
-                        src="/tree-dark.png"
+                        src="/logo-dark.png"
                         className="logo-dark"
-                        width={100}
-                        height={100}
+                        width={72}
+                        height={72}
                         alt="Logo"
+                        loading="eager"
                     />
                 </div>
                 <Link

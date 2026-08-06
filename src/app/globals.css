@@ -30,44 +30,6 @@
     --accent-muted: #f4f4f5;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root:not(.light):not(.dark) {
-        /* Brand */
-        --primary: #fafafa;
-        --primary-hover: #e4e4e7;
-        --primary-active: #d4d4d8;
-        --primary-foreground: #18181b;
-    
-        /* Layout */
-        --background: #09090b;
-        --surface: #111113;
-        --surface-hover: #18181b;
-        --card: #111113;
-    
-        /* Typography */
-        --text: #fafafa;
-        --text-muted: #a1a1aa;
-        --text-disabled: #52525b;
-    
-        /* Borders */
-        --border: #27272a;
-        --border-hover: #3f3f46;
-        --border-focus: #fafafa;
-    
-        /* Accent */
-        --accent: #fafafa;
-        --accent-muted: #18181b;
-
-        & .logo-light {
-            display: none;
-        }
-
-        & .logo-dark {
-            display: block;
-        }
-    }
-}
-
 .dark {
     /* Brand */
     --primary: #fafafa;
@@ -123,6 +85,60 @@
     --accent-muted: #f4f4f5;
 }
 
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+.dark .logo-light {
+  display: none;
+}
+
+.dark .logo-dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light):not(.dark) {
+        /* Brand */
+        --primary: #fafafa;
+        --primary-hover: #e4e4e7;
+        --primary-active: #d4d4d8;
+        --primary-foreground: #18181b;
+    
+        /* Layout */
+        --background: #09090b;
+        --surface: #111113;
+        --surface-hover: #18181b;
+        --card: #111113;
+    
+        /* Typography */
+        --text: #fafafa;
+        --text-muted: #a1a1aa;
+        --text-disabled: #52525b;
+    
+        /* Borders */
+        --border: #27272a;
+        --border-hover: #3f3f46;
+        --border-focus: #fafafa;
+    
+        /* Accent */
+        --accent: #fafafa;
+        --accent-muted: #18181b;
+
+        & .logo-light {
+            display: none;
+        }
+
+        & .logo-dark {
+            display: block;
+        }
+    }
+}
+
 @theme inline {
     /* Brand */
     --color-primary: var(--primary);
@@ -161,20 +177,4 @@ h1, h2, h3 {
 
 body {
     font-family: var(--font-secondary);
-}
-
-.logo-light {
-  display: block;
-}
-
-.logo-dark {
-  display: none;
-}
-
-.dark .logo-light {
-  display: none;
-}
-
-.dark .logo-dark {
-  display: block;
 }

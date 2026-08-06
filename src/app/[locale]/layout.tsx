@@ -71,7 +71,7 @@ export default async function Layout({
     return (
         <html
             lang={locale}
-            className={`${geist.variable} ${inter.variable} ${themeCookie}`}
+            className={`${geist.variable} ${inter.variable} ${themeCookie} bg-background`}
         >
             <body>
                 <NavBar content={null} locale={locale} />
