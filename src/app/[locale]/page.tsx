@@ -1,4 +1,4 @@
-import { Params } from "@/types/docs";
+import { Params } from "@/types/props";
 
 export default async function Page({
     params
@@ -11,6 +11,6 @@ export default async function Page({
     console.log(slug);
 
     return (
-        <div className="text-red-500 font-primary">Hey</div>
+        
     )
 };

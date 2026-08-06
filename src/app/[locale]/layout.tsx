@@ -1,6 +1,6 @@
 import "../globals.css";
 import type { Metadata } from "next";
-import type { Params } from "@/types/docs";
+import type { Params } from "@/types/props";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { Inter, Outfit } from "next/font/google";
@@ -21,12 +21,12 @@ export async function generateMetadata({
 }: {
     params: Params
 }): Promise<Metadata> {
-    const { locale, slug } = await params;
+    const { locale } = await params;
 
     switch(locale) {
         case "pt": 
             return {
-                title: "Documentação de tulin404",
+                title: "tulin404 docs",
                 description: "Documentação oficial para orientar, referências de APIs, tutoriais e exemplos."
             };
         case "en": 
@@ -36,7 +36,7 @@ export async function generateMetadata({
             };
         case "es": 
             return {
-                title: "Documentación de tulin404",
+                title: "tulin404 docs",
                 description: "Documentación oficial de orientación, referencias de API, tutoriales y ejemplos."
             }
     }
@@ -49,8 +49,7 @@ export default async function Layout({
     params: Params,
     children: ReactNode
 }) {
-    const { locale, slug } = await params;
-    console.log(slug);
+    const { locale } = await params;
     const locales = ["pt", "en", "es"] as const;
 
     if (!locales.includes(locale)) {
