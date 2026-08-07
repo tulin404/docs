@@ -14,24 +14,28 @@ export function NavBar({
             {/* NAV LEFT */}
             <div className="flex">
                 <div>
-                    <Image
-                        src="/logo-light.png"
-                        className="logo-light"
-                        width={72}
-                        height={72}
-                        alt="Logo"
-                        loading="eager"
-                        
-                    />
-                    
-                    <Image
-                        src="/logo-dark.png"
-                        className="logo-dark"
-                        width={72}
-                        height={72}
-                        alt="Logo"
-                        loading="eager"
-                    />
+                    <Link
+                        href={`/${locale}`}
+                    >
+                        <Image
+                            src="/logo-light.webp"
+                            className="logo-light"
+                            width={72}
+                            height={72}
+                            alt="Logo"
+                        />
+                    </Link>
+                    <Link
+                        href={`/${locale}`}
+                    >
+                        <Image
+                            src="/logo-dark.webp"
+                            className="logo-dark"
+                            width={72}
+                            height={72}
+                            alt="Logo"
+                        />
+                    </Link>
                 </div>
                 <Link
                     href={`/${locale}/docs`}
@@ -40,7 +44,7 @@ export function NavBar({
                     Docs
                 </Link>
             </div>
-            
+
         </nav>
     );
 };

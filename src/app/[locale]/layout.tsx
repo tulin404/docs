@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import type { Params } from "@/types/props";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { Geist, Inter } from "next/font/google";
+import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import { cookies } from "next/headers";
 import { NavBar } from "@/components/ui/NavBar";
 
-const geist = Geist({
+const space = Space_Grotesk({
     subsets: ["latin"],
     variable: "--font-primary",
 });
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
     subsets: ["latin"],
     variable: "--font-secondary",
 });
@@ -28,22 +28,22 @@ export async function generateMetadata({
     const base: Metadata = {
         title: "tulin404's docs",
         icons: {
-            icon: "/tree-dark.png"
+            icon: "/logo-dark.webp"
         }
     };
-    
+
     switch(locale) {
-        case "pt": 
+        case "pt":
             return {
                 ...base,
                 description: "Documentação oficial para orientar, referências de APIs, tutoriais e exemplos."
             };
-        case "en": 
+        case "en":
             return {
                 ...base,
                 description: "Official documentation for guides, API references, tutorials, and examples."
             };
-        case "es": 
+        case "es":
             return {
                 ...base,
                 description: "Documentación oficial de orientación, referencias de API, tutoriales y ejemplos."
@@ -71,7 +71,7 @@ export default async function Layout({
     return (
         <html
             lang={locale}
-            className={`${geist.variable} ${inter.variable} ${themeCookie} bg-background`}
+            className={`${space.variable} ${jakarta.variable} ${themeCookie} bg-background`}
         >
             <body>
                 <NavBar content={null} locale={locale} />
