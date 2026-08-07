@@ -10,9 +10,9 @@ export function NavBar({
     content: any // eslint-disable-line
 }) {
     return (
-        <nav className="bg-background border-b-2 border-border">
+        <nav className="bg-background border-b-2 border-border px-12 py-4">
             {/* NAV LEFT */}
-            <div className="flex">
+            <div className="flex items-center gap-8">
                 <div>
                     <Link
                         href={`/${locale}`}
@@ -20,9 +20,10 @@ export function NavBar({
                         <Image
                             src="/logo-light.webp"
                             className="logo-light"
-                            width={72}
-                            height={72}
+                            width={68}
+                            height={68}
                             alt="Logo"
+                            priority
                         />
                     </Link>
                     <Link
@@ -31,15 +32,16 @@ export function NavBar({
                         <Image
                             src="/logo-dark.webp"
                             className="logo-dark"
-                            width={72}
-                            height={72}
+                            width={58}
+                            height={58}
                             alt="Logo"
+                            priority
                         />
                     </Link>
                 </div>
                 <Link
                     href={`/${locale}/docs`}
-                    className="text-lg text-text font-primary"
+                    className="text-lg text-text font-primary font-medium"
                 >
                     Docs
                 </Link>
