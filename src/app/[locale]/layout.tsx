@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { Geist_Mono, Geist } from "next/font/google";
 import { cookies } from "next/headers";
-import { NavBar } from "@/components/layout/NavBar";
+import { NavBar } from "@/components/layout/NavBar/NavBar";
 
 const geistMono = Geist_Mono({
     subsets: ["latin"],

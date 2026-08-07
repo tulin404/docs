@@ -22,6 +22,8 @@ export function NavBar({
                 </Link>
             </div>
 
+            {/* NAV RIGHT */}
+
         </nav>
     );
 };

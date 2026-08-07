@@ -7,7 +7,7 @@
     --primary: #18181b;
     --primary-hover: #27272a;
     --primary-active: #3f3f46;
-    --primary-foreground: #fafafa;
+    --primary-muted: #f4f4f5;
 
     /* Layout */
     --background: #fafafa;
@@ -24,10 +24,6 @@
     --border: #e4e4e7;
     --border-hover: #d4d4d8;
     --border-focus: #18181b;
-
-    /* Accent */
-    --accent: #18181b;
-    --accent-muted: #f4f4f5;
 }
 
 .dark {
@@ -35,7 +31,7 @@
     --primary: #fafafa;
     --primary-hover: #e4e4e7;
     --primary-active: #d4d4d8;
-    --primary-foreground: #18181b;
+    --primary-muted: #18181b;
 
     /* Layout */
     --background: #09090b;
@@ -52,17 +48,13 @@
     --border: #27272a;
     --border-hover: #3f3f46;
     --border-focus: #fafafa;
-
-    /* Accent */
-    --accent: #fafafa;
-    --accent-muted: #18181b;
 }
 
 .light {
     --primary: #18181b;
     --primary-hover: #27272a;
     --primary-active: #3f3f46;
-    --primary-foreground: #fafafa;
+    --primary-muted: #f4f4f5;
 
     /* Layout */
     --background: #fafafa;
@@ -79,10 +71,6 @@
     --border: #e4e4e7;
     --border-hover: #d4d4d8;
     --border-focus: #18181b;
-
-    /* Accent */
-    --accent: #18181b;
-    --accent-muted: #f4f4f5;
 }
 
 .logo-light {
@@ -107,27 +95,23 @@
         --primary: #fafafa;
         --primary-hover: #e4e4e7;
         --primary-active: #d4d4d8;
-        --primary-foreground: #18181b;
-    
+        --primary-muted: #18181b;
+
         /* Layout */
         --background: #09090b;
         --surface: #111113;
         --surface-hover: #18181b;
         --card: #111113;
-    
+
         /* Typography */
         --text: #fafafa;
         --text-muted: #a1a1aa;
         --text-disabled: #52525b;
-    
+
         /* Borders */
         --border: #27272a;
         --border-hover: #3f3f46;
         --border-focus: #fafafa;
-    
-        /* Accent */
-        --accent: #fafafa;
-        --accent-muted: #18181b;
 
         & .logo-light {
             display: none;
@@ -144,27 +128,23 @@
     --color-primary: var(--primary);
     --color-primary-hover: var(--primary-hover);
     --color-primary-active: var(--primary-active);
-    --color-primary-foreground: var(--primary-foreground);
-    
+    --color-primary-muted: var(--primary-muted);
+
     /* Layout */
     --color-background: var(--background);
     --color-surface: var(--surface);
     --color-surface-hover: var(--surface-hover);
     --color-card: var(--card);
-    
+
     /* Typography */
     --color-text: var(--text);
     --color-text-muted: var(--text-muted);
     --color-text-disabled: var(--text-disabled);
-    
+
     /* Borders */
     --color-border: var(--border);
     --color-border-hover: var(--border-hover);
     --color-border-focus: var(--border-focus);
-
-    /* Accent */
-    --color-accent: var(--accent);
-    --color-accent-muted: var(--accent-muted);
 
     /* Fonts */
     --font-primary: var(--font-primary), sans-serif;
