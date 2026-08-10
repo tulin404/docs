@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 import { localeToCountry } from "@/lib/utils/formatters";
 import { LOCALES } from "@/lib/utils/locales";
+import { usePathname, useRouter } from "next/navigation";
 
 export function ChangeLang({
     locale
@@ -14,6 +15,18 @@ export function ChangeLang({
 }) {
     const [isSelecting, setIsSelecting] = useState(false);
     const [currentLocale, setCurrentLocale] = useState<Locale>(locale);
+
+    const pathname = usePathname();
+    const router = useRouter();
+
+    function handleLocaleChange(locale: Locale) {
+        setCurrentLocale(locale);
+        setIsSelecting(false);
+
+        const segments = pathname.split("/");
+        segments[1] = locale;
+        router.push(segments.join("/"));
+    };
     
     return (
         <div className="relative">
@@ -63,12 +76,7 @@ export function ChangeLang({
                     LOCALES.filter(locale => locale !== currentLocale).map(locale => 
                         <button
                             key={locale}
-                            onClick={
-                                () => {
-                                    setCurrentLocale(locale);
-                                    setIsSelecting(false);
-                                }
-                            }
+                            onClick={() => handleLocaleChange(locale)}
                             className="flex gap-2 items-center"
                         >
                             <ReactCountryFlag
