@@ -52,7 +52,7 @@ export function NavBar({
             </div>
 
             {/* NAV RIGHT */}
-            <div className="flex items-center">
+            <div className="flex items-center gap-8">
                 <ChangeLang locale={locale} />
                 <GitHub />
             </div>
