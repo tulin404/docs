@@ -70,11 +70,11 @@ export default async function Layout({
 
     return (
         <html
-            lang={locale}
+            lang={locale === "pt" ? "pt-BR" : locale}
             className={`${geistMono.variable} ${geist.variable} ${themeCookie} bg-background`}
         >
             <body>
-                <NavBar content={null} locale={locale} />
+                <NavBar locale={locale} />
                 {children}
             </body>
         </html>
