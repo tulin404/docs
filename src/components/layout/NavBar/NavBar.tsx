@@ -38,11 +38,11 @@ export function NavBar({
                 bg-background border-b-2 px-12 py-4 transition-colors duration-200
             `}>
             {/* NAV LEFT */}
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-10">
                 <Logo locale={locale} />
                 <Link
                     href={`/${locale}/docs`}
-                    className="text-lg text-text font-primary font-medium"
+                    className="text-text font-primary font-medium"
                 >
                     Docs
                 </Link>
