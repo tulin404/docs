@@ -6,7 +6,7 @@ export function GitHub() {
             rel="noreferrer noopener"
             className={`
                 relative h-7
-                after:absolute after:-inset-2 after:-z-10 after:rounded-full after:bg-text/20 after:blur-lg after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-400 after:delay-100
+                after:absolute after:-inset-2 after:-z-10 after:rounded-full after:bg-text/20 after:blur-lg after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-400 after:delay-50
                 `}
         >
             <svg

@@ -69,7 +69,7 @@ export function ChangeLang({
                         :
                         "opacity-0 scale-35"
                     }
-                    absolute origin-top flex flex-col gap-1 transition-all duration-300 top-full left-1/2 -translate-x-1/2 w-max mt-2 border-border border-2 px-3 py-2 rounded-md
+                    absolute origin-top flex flex-col gap-1 transition-all duration-300 top-full left-1/2 -translate-x-1/2 w-max mt-2 border-border border-2 px-3 py-2 rounded-md hover:border-border-hover
                     `}
             >
                 {
