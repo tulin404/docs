@@ -27,7 +27,7 @@ export function ChangeLang({
         segments[1] = locale;
         router.push(segments.join("/"));
     };
-    
+
     return (
         <div className="relative">
             <button
@@ -73,11 +73,11 @@ export function ChangeLang({
                     `}
             >
                 {
-                    LOCALES.filter(locale => locale !== currentLocale).map(locale => 
+                    LOCALES.filter(locale => locale !== currentLocale).map(locale =>
                         <button
                             key={locale}
                             onClick={() => handleLocaleChange(locale)}
-                            className="flex gap-2 items-center"
+                            className="group flex gap-2 items-center"
                         >
                             <ReactCountryFlag
                                 countryCode={localeToCountry(locale)}
@@ -89,7 +89,7 @@ export function ChangeLang({
                                     objectFit: "cover",
                                 }}
                             />
-                            <span className="text-text-muted hover:text-text transition-colors duration-200 text-lg">
+                            <span className="text-text-muted group-hover:text-text transition-colors duration-200 text-lg">
                                 {locale.toUpperCase()}
                             </span>
                         </button>
