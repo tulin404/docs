@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import type { Params } from "@/types/props";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { Geist_Mono, Geist } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import { cookies } from "next/headers";
 import { NavBar } from "@/components/layout/NavBar/NavBar";
 
@@ -11,11 +11,6 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
     variable: "--font-primary",
 });
-
-const geist = Geist({
-    subsets: ["latin"],
-    variable: "--font-secondary"
-})
 
 
 export async function generateMetadata({
@@ -71,7 +66,7 @@ export default async function Layout({
     return (
         <html
             lang={locale === "pt" ? "pt-BR" : locale}
-            className={`${geistMono.variable} ${geist.variable} ${themeCookie} bg-background`}
+            className={`${geistMono.variable} ${themeCookie} bg-background`}
         >
             <body>
                 <NavBar locale={locale} />
