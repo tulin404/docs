@@ -4,7 +4,10 @@ export function GitHub() {
             href="https://github.com/tulin404"
             target="_blank"
             rel="noreferrer noopener"
-            className="h-7"
+            className={`
+                relative h-7
+                after:absolute after:-inset-2 after:-z-10 after:rounded-full after:bg-text/20 after:blur-lg after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-400 after:delay-100
+                `}
         >
             <svg
                 role="img"
