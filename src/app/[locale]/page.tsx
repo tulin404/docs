@@ -18,7 +18,7 @@ export default async function Page({
                     <WordSlider content={content} />
                     <span className="text-2xl">{content.hero}</span>
                 </h1>
-                <span className="text-text-muted">| {content.desc}</span>
+                <span className="text-text-muted">{content.desc}</span>
             </div>
 
         </section>
