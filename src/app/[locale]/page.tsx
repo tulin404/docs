@@ -20,7 +20,7 @@ export default async function Page({
                 </h1>
                 <span className="text-text-muted">{content.desc}</span>
             </div>
-
+            
         </section>
     )
 };
