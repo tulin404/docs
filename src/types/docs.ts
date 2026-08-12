@@ -3,3 +3,6 @@ export type StartContent = {
     hero: string,
     desc: string
 };
+
+export type DocType = 
+    "project" | "api" | "module" | "experiment";

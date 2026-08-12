@@ -1,9 +1,10 @@
+import { DocType } from "@/types/docs";
 import { Layers, Braces, Box, FlaskConical } from "lucide-react";
 
 export function Card({
     type
 }: {
-    type: "project" | "api" | "module" | "experiment"
+    type: DocType
 }) {
     const icon = () => {
         switch(type) {
