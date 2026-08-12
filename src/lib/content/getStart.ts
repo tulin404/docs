@@ -6,7 +6,7 @@ export function getStart(locale: Locale): StartContent {
         case "pt":
             return ({
                 keywords: ["Sistemas", "APIs", "Experimentos", "Soluções", "Implementações"],
-                hero: " que construi, documentado"
+                hero: " que construi, documentado.",
             });
         case "en":
         case "es":
