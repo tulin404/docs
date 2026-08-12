@@ -9,6 +9,10 @@ export function getStart(locale: Locale): StartContent {
                 hero: " que construi, documentado.",
             });
         case "en":
+            return ({
+                keywords: ["Systems", "APIs", "Experiments", "Solutions", "Implementations"],
+                hero: " that I've built, documented.",
+            });
         case "es":
     };
 };
