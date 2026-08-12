@@ -23,9 +23,9 @@ export function WordSlider({
     return (
         <div
             className={`
-                relative h-[4.75em] overflow-hidden
-                before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-[1em] before:bg-gradient-to-b before:from-background before:to-transparent
-                after:absolute after:inset-x-0 after:bottom-0 after:z-10 after:h-[1em] after:bg-gradient-to-t after:from-background after:to-transparent
+                relative h-[3.75em] overflow-hidden
+                before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-[0.5em] before:bg-gradient-to-b before:from-background before:to-transparent
+                after:absolute after:inset-x-0 after:bottom-0 after:z-10 after:h-[0.5em] after:bg-gradient-to-t after:from-background after:to-transparent
             `}
         >
             {keywords.map((word, i) => {
@@ -34,7 +34,7 @@ export function WordSlider({
                 return (
                     <span
                         key={word}
-                        className="absolute inset-0 transition-transform duration-500 ease-in-out text-5xl mt-3"
+                        className="absolute inset-0 transition-transform duration-500 ease-in-out text-5xl mt-1.25"
                         style={{
                             transform: `translateY(${offset}%)`,
                         }}
