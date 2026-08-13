@@ -28,7 +28,7 @@ export function ChangeTheme() {
 
     return (
         <div className="relative h-9.5 border-2 border-border rounded-full flex items-center justify-between px-2 gap-3 hover:border-border-hover transition-colors duration-200">
-            <div className="absolute rounded-full bg-text-disabled aspect-square size-6.5 -translate-y-1/2 top-1/2 right-1"></div>
+            <div className="absolute rounded-full bg-text-disabled/60 aspect-square size-6.5 -translate-y-1/2 top-1/2 right-1"></div>
             <button
                 onClick={() => changeTheme("light")}
                 className="z-20 text-text isolate"
