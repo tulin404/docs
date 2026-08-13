@@ -43,7 +43,8 @@ export function ChangeTheme({
                             ?
                             "left-1/2 -translate-x-1/2"
                             :
-                            "right-1"
+                            // THIS EQUALS right-1
+                            "left-[calc(100%-1.625rem-0.25rem)]"
                     }
                     absolute rounded-full bg-text-disabled/60 aspect-square size-6.5 -translate-y-1/2 top-1/2 right-1 transition-all duration-200
                 `}
