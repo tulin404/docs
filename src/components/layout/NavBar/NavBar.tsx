@@ -11,7 +11,7 @@ export function NavBar({
     locale: Locale,
 }) {
     return (
-        <nav className="fixed flex justify-between w-full bg-background border-b-2 px-12 py-4 transition-colors duration-200">
+        <nav className="fixed flex justify-between w-full bg-background px-12 py-4 transition-colors duration-200">
             {/* NAV LEFT */}
             <div className="flex items-center gap-10">
                 <Logo locale={locale} />

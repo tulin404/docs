@@ -8,31 +8,26 @@ export function Logo({
     locale: Locale
 }) {
     return (
-        <div>
-            <Link
-                href={`/${locale}`}
-            >
-                <Image
-                    src="/logo-light.webp"
-                    className="logo-light"
-                    width={58}
-                    height={58}
-                    alt="Logo"
-                    priority
-                />
-            </Link>
-            <Link
-                href={`/${locale}`}
-            >
-                <Image
-                    src="/logo-dark.webp"
-                    className="logo-dark"
-                    width={58}
-                    height={58}
-                    alt="Logo"
-                    priority
-                />
-            </Link>
-        </div>
+        <Link
+            href={`/${locale}`}
+            className="relative block size-[58px]"
+        >
+            <Image
+                src="/logo-light.webp"
+                className="logo-light absolute inset-0 transition-opacity duration-200"
+                width={58}
+                height={58}
+                alt="Logo"
+                priority
+            />
+            <Image
+                src="/logo-dark.webp"
+                className="logo-dark absolute inset-0 transition-opacity duration-200"
+                width={58}
+                height={58}
+                alt="Logo"
+                priority
+            />
+        </Link>
     );
 };
