@@ -2,33 +2,52 @@
 
 import { Sun, Moon, Laptop } from "lucide-react";
 import { useRouter } from "next/navigation";
+import type { Theme } from "@/types/props";
 
-export function ChangeTheme() {
+export function ChangeTheme({
+    initialTheme
+}: {
+    initialTheme: Theme
+}) {
     const router = useRouter();
 
     function changeTheme(theme: string) {
         const html = document.documentElement;
 
+        // REFRESH WILL CLEAN BOTH
+        html.classList.add("logo-transition");
         html.classList.add("theme-transition");
 
-        if (theme === "") {
+        if (!theme) {
             document.cookie = "theme=; Max-Age=0; path=/";
         } else {
             document.cookie = `theme=${theme}; path=/`;
-        };
+        }
 
+        // STARTS ANIMATION
         html.classList.toggle("dark", theme === "dark");
-
-        setTimeout(() => {
-            html.classList.remove("theme-transition");
-        }, 300);
 
         router.refresh();
     };
 
     return (
         <div className="relative h-9.5 border-2 border-border rounded-full flex items-center justify-between px-2 gap-3 hover:border-border-hover transition-colors duration-200">
-            <div className="absolute rounded-full bg-text-disabled/60 aspect-square size-6.5 -translate-y-1/2 top-1/2 right-1"></div>
+            <div
+                className={`
+                    ${
+                        initialTheme === "light"
+                            ?
+                            "left-1"
+                            :
+                        initialTheme === "dark"
+                            ?
+                            "left-1/2 -translate-x-1/2"
+                            :
+                            "right-1"
+                    }
+                    absolute rounded-full bg-text-disabled/60 aspect-square size-6.5 -translate-y-1/2 top-1/2 right-1 transition-all duration-200
+                `}
+            />
             <button
                 onClick={() => changeTheme("light")}
                 className="z-20 text-text isolate"
@@ -42,7 +61,7 @@ export function ChangeTheme() {
                 <Moon size="18" />
             </button>
             <button
-                onClick={() => changeTheme("")}
+                onClick={() => changeTheme(undefined)}
                 className="z-20 text-text isolate"
             >
                 <Laptop size="18" />

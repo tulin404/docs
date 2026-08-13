@@ -61,13 +61,12 @@ export default async function Layout({
     };
 
     const cookieStore = await cookies();
-    const themeCookie = cookieStore.get("theme")?.value ?? "";
-    console.log(themeCookie);
+    const theme = cookieStore.get("theme")?.value ?? undefined;
 
     return (
         <html
             lang={locale === "pt" ? "pt-BR" : locale}
-            className={`${geistMono.variable} ${themeCookie} bg-background`}
+            className={`${geistMono.variable} ${theme} bg-background`}
         >
             <body>
                 <NavBar locale={locale} />
