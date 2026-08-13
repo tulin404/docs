@@ -36,4 +36,21 @@ export const MODULES = (locale: Locale) => [
         ,
         repository: ""
     }
-]
+];
+
+export const EXPERIMENTS = (locale: Locale) => [
+    {
+        name:
+            locale === "pt" 
+                ?
+                "Detector de Isograma em GO"
+                :
+            locale === "en"
+                ?
+                "Isogram detector in GO"
+                :
+                "Detector de isogramas en Go"
+        ,
+        repository: ""
+    }
+];
