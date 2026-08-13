@@ -11,7 +11,7 @@ export function ChangeTheme({
 }) {
     const router = useRouter();
 
-    function changeTheme(theme: string) {
+    function changeTheme(theme: Theme) {
         const html = document.documentElement;
 
         // REFRESH WILL CLEAN BOTH
