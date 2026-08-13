@@ -86,19 +86,19 @@
 }
 
 .logo-light {
-  display: block;
+  opacity: 1;
 }
 
 .logo-dark {
-  display: none;
+  opacity: 0;
 }
 
 .dark .logo-light {
-  display: none;
+  opacity: 0;
 }
 
 .dark .logo-dark {
-  display: block;
+  opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -126,11 +126,11 @@
         --border-focus: #fafafa;
 
         & .logo-light {
-            display: none;
+            opacity: 0;
         }
 
         & .logo-dark {
-            display: block;
+            opacity: 1;
         }
     }
 }
@@ -164,6 +164,19 @@
 
 * {
     font-family: var(--font-primary);
+}
+
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+    transition:
+        color 200ms ease,
+        background-color 200ms ease,
+        border-color 200ms ease,
+        text-decoration-color 200ms ease,
+        fill 200ms ease,
+        stroke 200ms ease;
 }
 
 button:hover {
