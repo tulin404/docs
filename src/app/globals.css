@@ -85,6 +85,16 @@
     --border-focus: #18181b;
 }
 
+.logo-transition .logo-light,
+.logo-transition .logo-dark {
+    opacity: 0 !important;
+}
+
+.logo-light,
+.logo-dark {
+    transition: opacity 200ms ease 200ms;
+}
+
 .logo-light {
   opacity: 1;
 }
