@@ -15,20 +15,20 @@ export function Card({
     function getIcon() {
         switch(type) {
             case "project":
-                return <Layers className="text-text" />
+                return <Layers size={28} className="text-text" />
             case "api":
-                return <Braces className="text-text" />
+                return <Braces size={28} className="text-text" />
             case "module":
-                return <Box className="text-text" />
+                return <Box size={28} className="text-text" />
             case "experiment":
-                return <FlaskConical className="text-text" />
+                return <FlaskConical size={28} className="text-text" />
         };
     };
 
     return (
         <div className="p-4 border-2 border-border rounded-lg">
             {getIcon()}
-            <h2>{}</h2>
+            <h2 className="text-text text-2xl">{content.title}</h2>
         </div>
     );
 };
