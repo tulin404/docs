@@ -9,5 +9,6 @@ export type StartContent = {
 
 export type CardContent = {
     title: string,
-    desc: string
+    desc: string,
+    count: number
 };
