@@ -66,7 +66,7 @@ export default async function Layout({
     return (
         <html
             lang={locale === "pt" ? "pt-BR" : locale}
-            className={`${geistMono.variable} ${theme} bg-background`}
+            className={`${geistMono.variable} ${theme ?? ""} bg-background`}
         >
             <body>
                 <NavBar locale={locale} />
