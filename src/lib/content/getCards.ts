@@ -26,17 +26,17 @@ export function getCards(type: DocType, locale: Locale): CardContent {
             case "api":
                 return ({
                     pt: {
-                        title: "Projetos",
-                        desc: "Sistemas e aplicações completas que construí.",
+                        title: "APIs",
+                        desc: "APIs REST e GraphQL que desenvolvi.",
                         count: APIS.length
                     },
                     en: {
-                        title: "Projects",
-                        desc: "Full applications and systems that I've built.",
+                        title: "APIs",
+                        desc: "REST and GraphQL APIs that I've developed.",
                         count: APIS.length
                     },
                     es: {
-                        title: "",
+                        title: "APIs",
                         desc: "",
                         count: APIS.length
                     }
@@ -44,13 +44,13 @@ export function getCards(type: DocType, locale: Locale): CardContent {
             case "module":
                 return ({
                     pt: {
-                        title: "Projetos",
-                        desc: "Sistemas e aplicações completas que construí.",
+                        title: "Módulos",
+                        desc: "Pacotes reutilizáveis e utilitários.",
                         count: MODULES.length
                     },
                     en: {
-                        title: "Projects",
-                        desc: "Full applications and systems that I've built.",
+                        title: "Modules",
+                        desc: "Reusable packages and utilities.",
                         count: MODULES.length
                     },
                     es: {
@@ -62,19 +62,19 @@ export function getCards(type: DocType, locale: Locale): CardContent {
             case "experiment":
                 return ({
                     pt: {
-                        title: "Projetos",
-                        desc: "Sistemas e aplicações completas que construí.",
-                        count: MODULES.length
+                        title: "Experimentos",
+                        desc: "Pequenos experimentos e tópicos que estou explorando.",
+                        count: EXPERIMENTS.length
                     },
                     en: {
-                        title: "Projects",
-                        desc: "Full applications and systems that I've built.",
-                        count: MODULES.length
+                        title: "Experiments",
+                        desc: "Small experiments and topics that I'm exploring.",
+                        count: EXPERIMENTS.length
                     },
                     es: {
                         title: "",
                         desc: "",
-                        count: MODULES.length
+                        count: EXPERIMENTS.length
                     }
                 });
         };
