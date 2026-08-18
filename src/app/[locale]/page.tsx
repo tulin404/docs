@@ -14,15 +14,15 @@ export default async function Page({
     const content = getStart(locale);
 
     return (
-        <main className="h-dvh w-dvw flex flex-col gap-8 justify-center px-36">
-            <div className="flex flex-col gap-4 pb-8">
+        <main className="h-dvh w-dvw flex flex-col gap-12 justify-center px-36">
+            <div className="flex flex-col gap-4">
                 <h1 className="text-text">
                     <WordSlider content={content} />
                     <span className="text-2xl">{content.hero}</span>
                 </h1>
                 <span className="text-text-muted">{content.desc}</span>
             </div>
-            <div className="flex">
+            <div className="flex justify-between gap-8">
                 {DOCTYPES.map(type => 
                     <Card key={type} type={type} locale={locale} />
                 )}
