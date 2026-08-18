@@ -29,7 +29,7 @@ export function Card({
     return (
         <Link
             href=""
-            className="group flex flex-col flex-1 justify-between gap-6 p-6 border-2 border-border rounded-lg bg-linear-to-t from-background to-text-disabled/10 hover:border-border-hover transition-colors duration-200 hover:cursor-pointer"
+            className="group flex flex-col flex-1 justify-between gap-6 p-5 border-2 border-border rounded-lg bg-linear-to-t from-background to-text-disabled/10 hover:border-border-hover transition-colors duration-200 hover:cursor-pointer"
         >
             <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between">
