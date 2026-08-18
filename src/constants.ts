@@ -54,3 +54,5 @@ export const EXPERIMENTS = (locale: Locale) => [
         repository: ""
     }
 ];
+
+export const DOCTYPES = ["project", "api", "module", "experiment"] as const;

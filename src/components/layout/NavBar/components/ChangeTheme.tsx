@@ -22,7 +22,7 @@ export function ChangeTheme({
             document.cookie = "theme=; Max-Age=0; path=/";
         } else {
             document.cookie = `theme=${theme}; path=/`;
-        }
+        };
 
         // STARTS ANIMATION
         html.classList.toggle("dark", theme === "dark");
