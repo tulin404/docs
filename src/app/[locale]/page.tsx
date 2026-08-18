@@ -2,6 +2,7 @@ import { Card } from "@/components/home/Card";
 import { WordSlider } from "@/components/home/WordSlider";
 import { getStart } from "@/lib/content/getStart";
 import { Params } from "@/types/props";
+import { DOCTYPES } from "@/constants";
 
 export default async function Page({
     params
@@ -13,7 +14,7 @@ export default async function Page({
     const content = getStart(locale);
 
     return (
-        <main className="h-dvh w-dvw flex flex-col justify-center px-36">
+        <main className="h-dvh w-dvw flex flex-col gap-8 justify-center px-36">
             <div className="flex flex-col gap-4 pb-8">
                 <h1 className="text-text">
                     <WordSlider content={content} />
@@ -22,7 +23,9 @@ export default async function Page({
                 <span className="text-text-muted">{content.desc}</span>
             </div>
             <div className="flex">
-                <Card type="project" locale={locale} />
+                {DOCTYPES.map(type => 
+                    <Card key={type} type={type} locale={locale} />
+                )}
             </div>
         </main>
     )
