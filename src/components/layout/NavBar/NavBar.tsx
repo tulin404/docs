@@ -1,4 +1,4 @@
-import type { Locale } from "@/types/props";
+import type { Locale, Theme } from "@/types/props";
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { Logo } from "@/components/layout/Logo";
@@ -12,7 +12,7 @@ export async function NavBar({
     locale: Locale,
 }) {
     const cookieStore = await cookies();
-    const theme = cookieStore.get("theme")?.value ?? "";
+    const theme = cookieStore.get("theme")?.value as Theme ?? undefined;
 
     return (
         <nav className="fixed flex justify-between w-full bg-background px-12 py-4 transition-colors duration-200">

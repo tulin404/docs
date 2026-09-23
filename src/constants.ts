@@ -1,5 +1,7 @@
 import { Locale } from "./types/props";
 
+export const LOCALES: Locale[] = ["pt", "en", "es"] as const;
+
 export const PROJECTS = [
     {
         name: "FuelStock",
@@ -24,7 +26,7 @@ export const APIS = [
 export const MODULES = (locale: Locale) => [
     {
         name:
-            locale === "pt" 
+            locale === "pt"
                 ?
                 "Auth (Sessões + JWT)"
                 :
@@ -41,7 +43,7 @@ export const MODULES = (locale: Locale) => [
 export const EXPERIMENTS = (locale: Locale) => [
     {
         name:
-            locale === "pt" 
+            locale === "pt"
                 ?
                 "Detector de Isograma em GO"
                 :

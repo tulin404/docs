@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 import { localeToCountry } from "@/lib/utils/formatters";
-import { LOCALES } from "@/lib/utils/locales";
+import { LOCALES } from "@/constants";
 import { usePathname, useRouter } from "next/navigation";
 
 export function ChangeLang({
