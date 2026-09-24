@@ -4,24 +4,29 @@ export const LOCALES: Locale[] = ["pt", "en", "es"] as const;
 
 export const PROJECTS = [
     {
+        id: 1245816633,
         name: "FuelStock",
         repository: ""
     },
     {
+        id: 1313823187,
         name: "Docs",
         repository: ""
     }
-];
+] as const;
 
 export const APIS = [
     {
+        id: 1135672317,
         name: "Stormio",
         repository: ""
     },
     {
-        name: "UniFlow"
+        id: 1185588340,
+        name: "UniFlow",
+        repository: ""
     }
-];
+] as const;
 
 export const MODULES = (locale: Locale) => [
     {
@@ -38,10 +43,11 @@ export const MODULES = (locale: Locale) => [
         ,
         repository: ""
     }
-];
+] as const;
 
 export const EXPERIMENTS = (locale: Locale) => [
     {
+        id: 1386365670,
         name:
             locale === "pt"
                 ?
@@ -55,6 +61,6 @@ export const EXPERIMENTS = (locale: Locale) => [
         ,
         repository: ""
     }
-];
+] as const;
 
 export const DOCTYPES = ["project", "api", "module", "experiment"] as const;
