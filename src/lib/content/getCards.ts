@@ -18,8 +18,8 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                         count: PROJECTS.length
                     },
                     es: {
-                        title: "",
-                        desc: "",
+                        title: "Proyectos",
+                        desc: "Sistemas y aplicaciones completos que desarrollé.",
                         count: PROJECTS.length
                     }
                 });
@@ -37,7 +37,7 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                     },
                     es: {
                         title: "APIs",
-                        desc: "",
+                        desc: "API REST y GraphQL que desarrollé.",
                         count: APIS.length
                     }
                 });
@@ -54,8 +54,8 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                         count: MODULES.length
                     },
                     es: {
-                        title: "",
-                        desc: "",
+                        title: "Módulos",
+                        desc: "Paquetes reutilizables y utilitarios.",
                         count: MODULES.length
                     }
                 });
@@ -72,8 +72,8 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                         count: EXPERIMENTS.length
                     },
                     es: {
-                        title: "",
-                        desc: "",
+                        title: "Experimentos",
+                        desc: "Pequeños experimentos y temas que estoy explorando.",
                         count: EXPERIMENTS.length
                     }
                 });
