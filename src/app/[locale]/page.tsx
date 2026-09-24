@@ -8,9 +8,36 @@ export default async function Page({
     params
 } : {
     params: Params
-}) {
-    const { locale } = await params;
+    }) {
+    let data;
 
+    const username = "tulin404";
+    const token = process.env.GITHUB_PAT;
+
+    // IF THE FETCH FAILS, DATA IS BEING SET TO NULL FOR DISPLAYING CUSTOM MESSAGE TO USER
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`, {
+            headers: {
+                'Accept': 'application/vnd.github+json',
+                'Authorization': `Bearer ${token}`,
+            },
+            next: { revalidate: 60 }
+        });
+
+        if (!response.ok) {
+            console.log("[GITHUB API RESPONSE ERROR]: ", response.status);
+            data = null;
+        };
+
+        data = await response.json();
+    } catch (error) {
+        console.log("[GITHUB API FETCH ERROR]: ", error);
+        data = null;
+    };
+
+    console.log(data)
+
+    const { locale } = await params;
     const content = getStart(locale);
 
     return (
@@ -30,6 +57,9 @@ export default async function Page({
             <div className="bg-border/30 h-0.5 " />
             <div className="flex flex-col">
                 <h3 className="text-lg text-text font-medium">{content.recent}</h3>
+                <div>
+
+                </div>
             </div>
         </main>
     )
