@@ -14,7 +14,7 @@ export default async function Page({
     const content = getStart(locale);
 
     return (
-        <main className="h-dvh w-dvw flex flex-col gap-12 justify-center px-36">
+        <main className="h-dvh w-dvw flex flex-col gap-8 justify-center px-36">
             <div className="flex flex-col gap-3">
                 <h1 className="text-text">
                     <WordSlider content={content} />
@@ -22,12 +22,15 @@ export default async function Page({
                 </h1>
                 <span className="text-text-muted text-lg">{content.desc}</span>
             </div>
-            <div className="flex justify-between gap-8">
-                {DOCTYPES.map(type => 
+            <div className="flex justify-between gap-10">
+                {DOCTYPES.map(type =>
                     <Card key={type} type={type} locale={locale} />
                 )}
             </div>
-            <div className="bg-border h-0.5" />
+            <div className="bg-border/30 h-0.5 " />
+            <div className="flex flex-col">
+                <h3 className="text-lg text-text font-medium">{content.recent}</h3>
+            </div>
         </main>
     )
 };

@@ -12,7 +12,7 @@ export function Card({
     locale: Locale
 }) {
     const content = getCards(type, locale)
-    
+
     function getIcon() {
         switch(type) {
             case "project":
@@ -37,12 +37,12 @@ export function Card({
                     <span className="rounded-md text-text border-2 border-border px-2 py-0.5 group-hover:border-border-hover transition-colors duration-200">{content.count}</span>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h2 className="text-text text-xl tracking-wide">{content.title}</h2>
+                    <h2 className="text-text text-xl font-medium tracking-wide">{content.title}</h2>
                     <span className="text-text-muted">{content.desc}</span>
                 </div>
             </div>
-            <div className="flex flex-col gap-6">
-                <div className="group-hover:bg-border-hover bg-border h-0.5 transition-colors duration-200" />
+            <div className="flex flex-col gap-4">
+                <div className="group-hover:bg-border-hover/30 bg-border/30 h-0.5 transition-colors duration-200" />
                 <MoveRight className="group-hover:translate-x-4 transition-transform duration-400 text-text" />
             </div>
         </Link>
