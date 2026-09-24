@@ -1,10 +1,11 @@
-export type DocType = 
+export type DocType =
     "project" | "api" | "module" | "experiment";
-    
+
 export type StartContent = {
     keywords: string[],
     hero: string,
-    desc: string
+    desc: string,
+    recent: string
 };
 
 export type CardContent = {
