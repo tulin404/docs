@@ -6,12 +6,10 @@ export const PROJECTS = [
     {
         id: 1245816633,
         name: "FuelStock",
-        repository: ""
     },
     {
         id: 1313823187,
         name: "Docs",
-        repository: ""
     }
 ] as const;
 
@@ -19,12 +17,10 @@ export const APIS = [
     {
         id: 1135672317,
         name: "Stormio",
-        repository: ""
     },
     {
         id: 1185588340,
         name: "UniFlow",
-        repository: ""
     }
 ] as const;
 
@@ -41,7 +37,6 @@ export const MODULES = (locale: Locale) => [
                 :
                 "Auth (Sesiones + JWT)"
         ,
-        repository: ""
     }
 ] as const;
 
@@ -59,7 +54,6 @@ export const EXPERIMENTS = (locale: Locale) => [
                 :
                 "Detector de isogramas en Go"
         ,
-        repository: ""
     }
 ] as const;
 
