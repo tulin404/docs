@@ -1,5 +1,5 @@
 import type { Locale, Theme } from "@/types/props";
-import Link from "next/link";
+// import Link from "next/link";
 import { cookies } from "next/headers";
 import { Logo } from "@/components/layout/Logo";
 import { GitHub } from "@/components/ui/GitHub";
@@ -19,7 +19,7 @@ export async function NavBar({
             {/* NAV LEFT */}
             <div className="flex items-center gap-10">
                 <Logo locale={locale} />
-                <Link
+                {/*<Link
                     href={`/${locale}/docs`}
                     className={`
                         relative text-text font-medium
@@ -27,7 +27,7 @@ export async function NavBar({
                     `}
                 >
                     Docs
-                </Link>
+                </Link>*/}
             </div>
 
             {/* NAV RIGHT */}
