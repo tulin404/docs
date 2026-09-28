@@ -11,7 +11,7 @@ export const PROJECTS = [
         id: 1313823187,
         name: "Docs",
     }
-] as const;
+];
 
 export const APIS = [
     {
@@ -22,10 +22,12 @@ export const APIS = [
         id: 1185588340,
         name: "UniFlow",
     }
-] as const;
+];
 
 export const MODULES = (locale: Locale) => [
     {
+        // TEST
+        id: 0,
         name:
             locale === "pt"
                 ?
@@ -36,9 +38,8 @@ export const MODULES = (locale: Locale) => [
                 "Auth (Sessions + JWT)"
                 :
                 "Auth (Sesiones + JWT)"
-        ,
     }
-] as const;
+];
 
 export const EXPERIMENTS = (locale: Locale) => [
     {
@@ -53,8 +54,7 @@ export const EXPERIMENTS = (locale: Locale) => [
                 "Isogram detector in GO"
                 :
                 "Detector de isogramas en Go"
-        ,
     }
-] as const;
+];
 
 export const DOCTYPES = ["project", "api", "module", "experiment"] as const;
