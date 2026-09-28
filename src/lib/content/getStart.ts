@@ -1,6 +1,7 @@
 import { StartContent } from "@/types/docs";
 import { Locale } from "@/types/props";
 
+// GETS THE MAIN PAGE (/[locale]) CONTENT
 export function getStart(locale: Locale): StartContent {
     switch(locale) {
         case "pt":

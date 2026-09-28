@@ -2,6 +2,7 @@ import { CardContent, DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
 import { PROJECTS, APIS, MODULES, EXPERIMENTS } from "@/constants";
 
+// GETS THE CARDS (/[locale]) CONTENT
 export function getCards(type: DocType, locale: Locale): CardContent {
     function getAllLangs() {
         switch(type) {
