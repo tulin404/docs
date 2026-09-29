@@ -1,9 +1,9 @@
 import { APIS, EXPERIMENTS, MODULES, PROJECTS } from "@/constants";
 import { Repo } from "@/types/api";
+import { DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
 
 // GETS THE RAW GITHUB API DATA
-// 'id' AS UNIQUE KEY FOR TS SATISFACTION
 export async function getRepos():
     Promise<Repo[] | null>
 {
@@ -52,7 +52,9 @@ export async function getUpdated(locale: Locale):
 
         return {
             id: repo.id,
-            name: item?.name,
+            type: item.type as DocType,
+            repo_name: repo.name,
+            name: item.name,
             html_url: repo.html_url,
             homepage: repo.homepage,
             updated_at: repo.updated_at
