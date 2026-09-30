@@ -15,7 +15,7 @@ export async function NavBar({
     const theme = cookieStore.get("theme")?.value as Theme ?? undefined;
 
     return (
-        <nav className="fixed flex justify-between w-full bg-background px-12 py-4 transition-colors duration-200">
+        <nav className="fixed flex justify-between w-full bg-background px-12 py-4 transition-colors duration-200 z-20">
             {/* NAV LEFT */}
             <div className="flex items-center gap-10">
                 <Logo locale={locale} />
