@@ -7,10 +7,9 @@ import { getUpdated } from "@/lib/content/github";
 import { Icon } from "@/components/ui/Icon";
 import { Fragment } from "react/jsx-runtime";
 import Link from "next/link";
-import { formatDocType, formatLastUpdated } from "@/lib/utils/formatters";
+import { formatLastUpdated } from "@/lib/utils/formatters";
 import { MoveRight } from "lucide-react";
 import { translateTypes } from "@/lib/utils/translateType";
-import { DocType } from "@/types/docs";
 
 export default async function Page({
     params
