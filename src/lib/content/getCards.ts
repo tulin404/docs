@@ -1,6 +1,6 @@
 import { CardContent, DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
-import { getDocNumbers } from "./getDoc";
+import { getDocNumbers } from "./getDocNumbers";
 
 // GETS THE CARDS (/[locale]) CONTENT
 export function getCards(type: DocType, locale: Locale): CardContent {

@@ -7,6 +7,10 @@ import { getUpdated } from "@/lib/content/github";
 import { Icon } from "@/components/ui/Icon";
 import { Fragment } from "react/jsx-runtime";
 import Link from "next/link";
+import { formatDocType, formatLastUpdated } from "@/lib/utils/formatters";
+import { MoveRight } from "lucide-react";
+import { translateTypes } from "@/lib/utils/translateType";
+import { DocType } from "@/types/docs";
 
 export default async function Page({
     params
@@ -18,6 +22,7 @@ export default async function Page({
     const updated = await getUpdated(locale);
     // const repos = await getRepos();
     const content = getStart(locale);
+    const translatedTypes = translateTypes(locale);
 
     console.log(updated);
     // console.log(repos);
@@ -39,22 +44,33 @@ export default async function Page({
             <div className="bg-border/30 h-0.5 " />
             <div className="flex flex-col gap-4">
                 <h3 className="text-lg text-text font-medium">{content.recent}</h3>
-                <div className="flex flex-col gap-2 w-full">
-                    {updated?.map(item => (
+                <div className="flex flex-col gap-2.5 w-full">
+                    {updated?.map(item =>
                         <Fragment key={item.id}>
                             <Link
                                 href={`/${item.type}s/${item.repo_name}`}
-                                className="flex flex-col gap-2 text-text"
+                                className="group flex justify-between text-sm px-4"
                             >
-                                <div className="flex items-center gap-4 px-4">
-                                    <Icon type={item.type} size={18} />
-                                    <h4 className="text-sm">{item.name}</h4>
+                                <div className="flex items-center text-text gap-4">
+                                    <Icon type={item.type} size={20} />
+                                    <h4>{item.name}</h4>
+                                </div>
+                                <span className="hidden sm:block absolute left-1/2 -translate-x-8 text-text-muted group-hover:text-text transition-colors duration-200">
+                                    {translatedTypes[`${item.type}s`].slice(0, -1).charAt(0).toUpperCase() + translatedTypes[`${item.type}s`].slice(1, -1)}
+                                </span>
+                                <div className="flex gap-16">
+                                    <span className="text-text-muted group-hover:text-text transition-colors duration-200">{formatLastUpdated(item.updated_at)}</span>
+                                    <MoveRight size={20} className="text-text-disabled group-hover:text-text group-hover:translate-x-2 transition-all duration-200" />
                                 </div>
                             </Link>
                             <div className="h-0.5 w-full bg-border/30" />
                         </Fragment>
-                    ))}
+                        )
+                    })
                 </div>
+            </div>
+            <div>
+
             </div>
         </main>
     )
