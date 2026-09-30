@@ -1,27 +1,29 @@
 import { CardContent, DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
-import { PROJECTS, APIS, MODULES, EXPERIMENTS } from "@/constants";
+import { getDocNumbers } from "./getDocNumbers";
 
 // GETS THE CARDS (/[locale]) CONTENT
 export function getCards(type: DocType, locale: Locale): CardContent {
     function getAllLangs() {
+        const numbers = getDocNumbers();
+
         switch(type) {
             case "project":
                 return ({
                     pt: {
                         title: "Projetos",
                         desc: "Sistemas e aplicações completas que construí.",
-                        count: PROJECTS.length
+                        count: numbers.projects
                     },
                     en: {
                         title: "Projects",
                         desc: "Full applications and systems that I've built.",
-                        count: PROJECTS.length
+                        count: numbers.projects
                     },
                     es: {
                         title: "Proyectos",
                         desc: "Sistemas y aplicaciones completos que desarrollé.",
-                        count: PROJECTS.length
+                        count: numbers.projects
                     }
                 });
             case "api":
@@ -29,17 +31,17 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                     pt: {
                         title: "APIs",
                         desc: "APIs REST e GraphQL que desenvolvi.",
-                        count: APIS.length
+                        count: numbers.apis
                     },
                     en: {
                         title: "APIs",
                         desc: "REST and GraphQL APIs that I've developed.",
-                        count: APIS.length
+                        count: numbers.apis
                     },
                     es: {
                         title: "APIs",
                         desc: "API REST y GraphQL que desarrollé.",
-                        count: APIS.length
+                        count: numbers.apis
                     }
                 });
             case "module":
@@ -47,17 +49,17 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                     pt: {
                         title: "Módulos",
                         desc: "Pacotes reutilizáveis e utilitários.",
-                        count: MODULES.length
+                        count: numbers.modules
                     },
                     en: {
                         title: "Modules",
                         desc: "Reusable packages and utilities.",
-                        count: MODULES.length
+                        count: numbers.modules
                     },
                     es: {
                         title: "Módulos",
                         desc: "Paquetes reutilizables y utilitarios.",
-                        count: MODULES.length
+                        count: numbers.modules
                     }
                 });
             case "experiment":
@@ -65,17 +67,17 @@ export function getCards(type: DocType, locale: Locale): CardContent {
                     pt: {
                         title: "Experimentos",
                         desc: "Pequenos experimentos e tópicos que estou explorando.",
-                        count: EXPERIMENTS.length
+                        count: numbers.experiments
                     },
                     en: {
                         title: "Experiments",
                         desc: "Small experiments and topics that I'm exploring.",
-                        count: EXPERIMENTS.length
+                        count: numbers.experiments
                     },
                     es: {
                         title: "Experimentos",
                         desc: "Pequeños experimentos y temas que estoy explorando.",
-                        count: EXPERIMENTS.length
+                        count: numbers.experiments
                     }
                 });
         };
