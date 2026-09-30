@@ -42,9 +42,9 @@ export async function generateMetadata({
             return {
                 ...base,
                 description: "Documentación oficial de orientación, referencias de API, tutoriales y ejemplos."
-            }
-    }
-}
+            };
+    };
+};
 
 export default async function Layout({
     params,
