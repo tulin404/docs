@@ -6,7 +6,7 @@ import { Locale } from "./types/props";
 // Types are added individually for identification (mainy used for icons in the main page)
 export const LOCALES: Locale[] = ["pt", "en", "es"] as const;
 
-export const PROJECTS = [
+export const PROJECTS = (locale: Locale) => [
     {
         id: 1245816633,
         type: "project",
@@ -19,7 +19,7 @@ export const PROJECTS = [
     }
 ];
 
-export const APIS = [
+export const APIS = (locale: Locale) => [
     {
         id: 1135672317,
         type: "api",
