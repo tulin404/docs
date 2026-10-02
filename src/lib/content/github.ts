@@ -13,8 +13,8 @@ export async function getRepos():
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`, {
             headers: {
-                'Accept': 'application/vnd.github+json',
-                'Authorization': `Bearer ${token}`,
+                "Accept": "application/vnd.github+json",
+                "Authorization": `Bearer ${token}`,
             },
             next: { revalidate: 60 }
         });
