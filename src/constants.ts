@@ -10,21 +10,51 @@ export const PROJECTS = (locale: Locale) => [
     {
         id: 1245816633,
         type: "project",
-        name: "FuelStock"
+        name: "FuelStock",
+        desc:
+            locale === "pt"
+                ?
+                "SaaS para gestão de estoque e análise de vendas para lojas de conveniência de postos de combustível."
+                :
+            locale === "en"
+                ?
+                "SaaS for inventory management and sales analysis for gas station convenience stores."
+                :
+                "SaaS para la gestión de inventario y el análisis de ventas para tiendas de conveniencia en estaciones de servicio."
     },
     {
         id: 1313823187,
         type: "project",
-        name: "Docs"
+        name: "Docs",
+        desc:
+            locale === "pt"
+                ?
+                "Sistema de documentação técnica para organizar e apresentar projetos, APIs, módulos e experimentos."
+                :
+            locale === "en"
+                ?
+                "Technical documentation system for organizing and presenting projects, APIs, modules, and experiments."
+                :
+                "Sistema de documentación técnica para organizar y presentar proyectos, API, módulos y experimentos."
+    },
+    {
+        id: 1135672317,
+        type: "project",
+        name: "Stormio",
+        desc:
+            locale === "pt"
+                ?
+                "Aplicação web de clima rápida e responsiva, com previsão mundial, localização automática, tradução e cache integrado."
+                :
+            locale === "en"
+                ?
+                "Fast and responsive web weather application featuring worldwide forecasts, automatic location detection, translation, and integrated caching."
+                :
+                "Aplicación web de clima rápida y adaptable, con pronóstico mundial, localización automática, traducción y caché integrado."
     }
 ];
 
 export const APIS = (locale: Locale) => [
-    {
-        id: 1135672317,
-        type: "api",
-        name: "Stormio"
-    },
     {
         id: 1185588340,
         type: "api",
