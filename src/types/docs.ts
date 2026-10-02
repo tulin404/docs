@@ -11,5 +11,8 @@ export type StartContent = {
 export type CardContent = {
     title: string,
     desc: string,
+};
+
+export type Card = CardContent & {
     count: number
 };
