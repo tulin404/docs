@@ -10,7 +10,7 @@ import Link from "next/link";
 import { formatLastUpdated } from "@/lib/utils/formatters";
 import { MoveRight } from "lucide-react";
 import { translateTypes } from "@/lib/utils/translateType";
-import { getDocNumbers } from "@/lib/content/getDocNumbers";
+import { getDocCounts } from "@/lib/content/getDocCounts";
 
 export default async function Page({ params }: { params: Params }) {
     const { locale } = await params;
@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: Params }) {
     const updated = await getUpdated(locale);
     // const repos = await getRepos();
     const content = getStart(locale);
-    const numbers = getDocNumbers();
+    const counts = getDocCounts();
     const translatedTypes = translateTypes(locale);
 
     console.log(updated);
@@ -92,38 +92,38 @@ export default async function Page({ params }: { params: Params }) {
             </div>
             <div className="flex w-full text-text-muted items-center justify-center gap-4">
                 <span className="hover:text-text transition-colors duration-200">
-                    {numbers.projects <= 1
+                    {counts.projects <= 1
                         ?
-                        `${numbers.projects} ${translatedTypes.projects.slice(0, -1)}`
+                        `${counts.projects} ${translatedTypes.projects.slice(0, -1)}`
                         :
-                        `${numbers.projects} ${translatedTypes.projects}`
+                        `${counts.projects} ${translatedTypes.projects}`
                     }
                 </span>
                 <span>•</span>
                 <span className="hover:text-text transition-colors duration-200">
-                    {numbers.apis <= 1
+                    {counts.apis <= 1
                         ?
-                        `${numbers.apis} ${translatedTypes.apis.slice(0, -1)}`
+                        `${counts.apis} ${translatedTypes.apis.slice(0, -1)}`
                         :
-                        `${numbers.apis} ${translatedTypes.apis}`
+                        `${counts.apis} ${translatedTypes.apis}`
                     }
                 </span>
                 <span>•</span>
                 <span className="hover:text-text transition-colors duration-200">
-                    {numbers.modules <= 1
+                    {counts.modules <= 1
                         ?
-                        `${numbers.modules} ${translatedTypes.modules.slice(0, -1)}`
+                        `${counts.modules} ${translatedTypes.modules.slice(0, -1)}`
                         :
-                        `${numbers.modules} ${translatedTypes.modules}`
+                        `${counts.modules} ${translatedTypes.modules}`
                     }
                 </span>
                 <span>•</span>
                 <span className="hover:text-text transition-colors duration-200">
-                    {numbers.experiments <= 1
+                    {counts.experiments <= 1
                         ?
-                        `${numbers.experiments} ${translatedTypes.experiments.slice(0, -1)}`
+                        `${counts.experiments} ${translatedTypes.experiments.slice(0, -1)}`
                         :
-                        `${numbers.experiments} ${translatedTypes.experiments}`
+                        `${counts.experiments} ${translatedTypes.experiments}`
                     }
                 </span>
             </div>

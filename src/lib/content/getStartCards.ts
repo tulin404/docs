@@ -5,7 +5,7 @@ import { getDocCounts } from "./getDocCounts";
 // GETS THE CARDS (/[locale]) CONTENT
 export function getStartCards(type: DocType, locale: Locale): Card {
     function getAllLangs() {
-        const numbers = getDocCounts();
+        const counts = getDocCounts();
 
         switch(type) {
             case "project":
@@ -13,17 +13,17 @@ export function getStartCards(type: DocType, locale: Locale): Card {
                     pt: {
                         title: "Projetos",
                         desc: "Sistemas e aplicações completas que construí.",
-                        count: numbers.projects
+                        count: counts.projects
                     },
                     en: {
                         title: "Projects",
                         desc: "Full applications and systems that I've built.",
-                        count: numbers.projects
+                        count: counts.projects
                     },
                     es: {
                         title: "Proyectos",
                         desc: "Sistemas y aplicaciones completos que desarrollé.",
-                        count: numbers.projects
+                        count: counts.projects
                     }
                 });
             case "api":
@@ -31,17 +31,17 @@ export function getStartCards(type: DocType, locale: Locale): Card {
                     pt: {
                         title: "APIs",
                         desc: "APIs REST e GraphQL que desenvolvi.",
-                        count: numbers.apis
+                        count: counts.apis
                     },
                     en: {
                         title: "APIs",
                         desc: "REST and GraphQL APIs that I've developed.",
-                        count: numbers.apis
+                        count: counts.apis
                     },
                     es: {
                         title: "APIs",
                         desc: "API REST y GraphQL que desarrollé.",
-                        count: numbers.apis
+                        count: counts.apis
                     }
                 });
             case "module":
@@ -49,17 +49,17 @@ export function getStartCards(type: DocType, locale: Locale): Card {
                     pt: {
                         title: "Módulos",
                         desc: "Pacotes reutilizáveis e utilitários.",
-                        count: numbers.modules
+                        count: counts.modules
                     },
                     en: {
                         title: "Modules",
                         desc: "Reusable packages and utilities.",
-                        count: numbers.modules
+                        count: counts.modules
                     },
                     es: {
                         title: "Módulos",
                         desc: "Paquetes reutilizables y utilitarios.",
-                        count: numbers.modules
+                        count: counts.modules
                     }
                 });
             case "experiment":
@@ -67,17 +67,17 @@ export function getStartCards(type: DocType, locale: Locale): Card {
                     pt: {
                         title: "Experimentos",
                         desc: "Pequenos experimentos e tópicos que estou explorando.",
-                        count: numbers.experiments
+                        count: counts.experiments
                     },
                     en: {
                         title: "Experiments",
                         desc: "Small experiments and topics that I'm exploring.",
-                        count: numbers.experiments
+                        count: counts.experiments
                     },
                     es: {
                         title: "Experimentos",
                         desc: "Pequeños experimentos y temas que estoy explorando.",
-                        count: numbers.experiments
+                        count: counts.experiments
                     }
                 });
         };
