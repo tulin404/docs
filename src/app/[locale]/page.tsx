@@ -66,7 +66,7 @@ export default async function Page({ params }: { params: Params }) {
                                     </span>
                                     <div className="flex gap-16">
                                         <span className="text-text-muted group-hover:text-text transition-colors duration-200">
-                                            {formatLastUpdated(item.updated_at)}
+                                            {formatLastUpdated(locale, item.updated_at)}
                                         </span>
                                         <MoveRight
                                             size={20}
