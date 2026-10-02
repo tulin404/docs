@@ -1,4 +1,4 @@
-import { getStartCards } from "@/lib/content/getStartCards";
+import { getStartCards } from "@/lib/content/cards";
 import { DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
 import { MoveRight } from "lucide-react";
