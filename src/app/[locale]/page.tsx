@@ -35,7 +35,12 @@ export default async function Page({ params }: { params: Params }) {
             </div>
             <div className="flex justify-between gap-10">
                 {DOCTYPES.map((type) => (
-                    <Card key={type} type={type} locale={locale} />
+                    <Card
+                        key={type}
+                        type={type}
+                        locale={locale}
+                        url={type}
+                    />
                 ))}
             </div>
             <div className="bg-border/30 h-0.5 " />
@@ -61,7 +66,7 @@ export default async function Page({ params }: { params: Params }) {
                                             .slice(0, -1)
                                             .charAt(0)
                                             .toUpperCase() +
-                                            translatedTypes[`${item.type}s`].slice(1,-1,)
+                                            translatedTypes[`${item.type}s`].slice(1,-1)
                                         }
                                     </span>
                                     <div className="flex gap-16">
