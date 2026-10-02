@@ -1,4 +1,4 @@
-import { getCards } from "@/lib/content/getCards";
+import { getStartCards } from "@/lib/content/getStartCards";
 import { DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
 import { MoveRight } from "lucide-react";
@@ -7,16 +7,18 @@ import { Icon } from "../ui/Icon";
 
 export function Card({
     type,
-    locale
+    locale,
+    url
 }: {
     type: DocType,
-    locale: Locale
+    locale: Locale,
+    url: string
 }) {
-    const content = getCards(type, locale)
+    const content = getStartCards(type, locale)
 
     return (
         <Link
-            href=""
+            href={`/${locale}/${url}s`}
             className="group flex flex-col flex-1 justify-between gap-6 p-5 border-2 border-border rounded-lg bg-linear-to-t from-background to-text-disabled/10 hover:border-border-hover transition-colors duration-200 hover:cursor-pointer"
         >
             <div className="flex flex-col gap-4">
