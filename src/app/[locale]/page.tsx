@@ -3,7 +3,7 @@ import { WordSlider } from "@/components/home/WordSlider";
 import { getStart } from "@/lib/content/getStart";
 import { Params } from "@/types/props";
 import { DOCTYPES } from "@/constants";
-import { getUpdated } from "@/lib/content/github";
+import { GitHub } from "@/lib/content/github";
 import { Icon } from "@/components/ui/Icon";
 import { Fragment } from "react/jsx-runtime";
 import Link from "next/link";
@@ -15,7 +15,7 @@ import { getDocCounts } from "@/lib/content/getDocCounts";
 export default async function Page({ params }: { params: Params }) {
     const { locale } = await params;
 
-    const updated = await getUpdated(locale);
+    const updated = await GitHub.getUpdated(locale);
     // const repos = await getRepos();
     const content = getStart(locale);
     const counts = getDocCounts();
