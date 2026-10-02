@@ -48,7 +48,7 @@ export async function getUpdated(locale: Locale):
         };
     };
 
-    const spread = [...PROJECTS, ...APIS, ...MODULES(locale), ...EXPERIMENTS(locale)];
+    const spread = [...PROJECTS(locale), ...APIS(locale), ...MODULES(locale), ...EXPERIMENTS(locale)];
     const mapped = new Map(spread.map(item => [item.id, item]));
 
     return repos.flatMap(repo => {
