@@ -20,8 +20,13 @@ export function formatDocType(type: DocType) {
     };
 };
 
-export function formatLastUpdated(isoDate: string) {
-    return new Intl.DateTimeFormat("en-GB", {
+export function formatLastUpdated(
+    locale: string,
+    isoDate: string
+) {
+    const formattedLocale = locale === "pt" ? "pt-BR" : locale;
+
+    return new Intl.DateTimeFormat(formattedLocale, {
         timeZone: "America/Sao_Paulo",
         day: "2-digit",
         month: "short",
