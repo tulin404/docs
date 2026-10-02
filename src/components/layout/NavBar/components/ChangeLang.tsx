@@ -1,7 +1,7 @@
 "use client";
 
 import type { Locale } from "@/types/props";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 import { localeToCountry } from "@/lib/utils/formatters";
@@ -15,6 +15,7 @@ export function ChangeLang({
 }) {
     const [isSelecting, setIsSelecting] = useState(false);
     const [currentLocale, setCurrentLocale] = useState<Locale>(locale);
+    const menuRef = useRef<HTMLDivElement>(null);
 
     const pathname = usePathname();
     const router = useRouter();
@@ -28,8 +29,23 @@ export function ChangeLang({
         router.push(segments.join("/"));
     };
 
+    useEffect(() => {
+        function handleOutsideClick(event: MouseEvent) {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsSelecting(false);
+            };
+        };
+
+        document.addEventListener("mousedown", handleOutsideClick);
+
+        return () => document.removeEventListener("mousedown", handleOutsideClick);
+    }, []);
+
     return (
-        <div className="relative">
+        <div
+            ref={menuRef}
+            className="relative"
+        >
             <button
                 onClick={() => setIsSelecting(isSelecting => !isSelecting)}
                 className="flex items-center gap-3 border-border border-2 text-text px-3 py-1 rounded-md hover:border-border-hover transition-colors duration-200"
