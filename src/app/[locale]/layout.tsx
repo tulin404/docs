@@ -61,7 +61,7 @@ export default async function Layout({
     };
 
     const cookieStore = await cookies();
-    const theme = cookieStore.get("theme")?.value ?? undefined;
+    const theme = cookieStore.get("theme")?.value;
 
     return (
         <html
