@@ -1,11 +1,11 @@
-import { CardContent, DocType } from "@/types/docs";
+import { Card, DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
-import { getDocNumbers } from "./getDocNumbers";
+import { getDocCounts } from "./getDocCounts";
 
 // GETS THE CARDS (/[locale]) CONTENT
-export function getStartCards(type: DocType, locale: Locale): CardContent {
+export function getStartCards(type: DocType, locale: Locale): Card {
     function getAllLangs() {
-        const numbers = getDocNumbers();
+        const numbers = getDocCounts();
 
         switch(type) {
             case "project":
