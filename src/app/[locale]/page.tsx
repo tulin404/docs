@@ -44,37 +44,45 @@ export default async function Page({ params }: { params: Params }) {
                     {content.recent}
                 </h3>
                 <div className="flex flex-col gap-2.5 w-full">
-                    {updated?.map((item) => (
-                        <Fragment key={item.id}>
-                            <Link
-                                href={`/${item.type}s/${item.repo_name}`}
-                                className="group flex justify-between text-sm px-4"
-                            >
-                                <div className="flex items-center text-text gap-4">
-                                    <Icon type={item.type} size={20} />
-                                    <h4>{item.name}</h4>
-                                </div>
-                                <span className="hidden sm:block absolute left-1/2 -translate-x-8 text-text-muted group-hover:text-text transition-colors duration-200">
-                                    {translatedTypes[`${item.type}s`]
-                                        .slice(0, -1)
-                                        .charAt(0)
-                                        .toUpperCase() +
-                                        translatedTypes[`${item.type}s`].slice(1,-1,)
-                                    }
-                                </span>
-                                <div className="flex gap-16">
-                                    <span className="text-text-muted group-hover:text-text transition-colors duration-200">
-                                        {formatLastUpdated(item.updated_at)}
+                    {typeof updated !== "string"
+                        ?
+                        updated?.map((item) => (
+                            <Fragment key={item.id}>
+                                <Link
+                                    href={`/${item.type}s/${item.repo_name}`}
+                                    className="group flex justify-between text-sm px-4"
+                                >
+                                    <div className="flex items-center text-text gap-4">
+                                        <Icon type={item.type} size={20} />
+                                        <h4>{item.name}</h4>
+                                    </div>
+                                    <span className="hidden sm:block absolute left-1/2 -translate-x-8 text-text-muted group-hover:text-text transition-colors duration-200">
+                                        {translatedTypes[`${item.type}s`]
+                                            .slice(0, -1)
+                                            .charAt(0)
+                                            .toUpperCase() +
+                                            translatedTypes[`${item.type}s`].slice(1,-1,)
+                                        }
                                     </span>
-                                    <MoveRight
-                                        size={20}
-                                        className="text-text-disabled group-hover:text-text group-hover:translate-x-2 transition-all duration-200"
-                                    />
-                                </div>
-                            </Link>
-                            <div className="h-0.5 w-full bg-border/30" />
-                        </Fragment>
-                    ))}
+                                    <div className="flex gap-16">
+                                        <span className="text-text-muted group-hover:text-text transition-colors duration-200">
+                                            {formatLastUpdated(item.updated_at)}
+                                        </span>
+                                        <MoveRight
+                                            size={20}
+                                            className="text-text-disabled group-hover:text-text group-hover:translate-x-2 transition-all duration-200"
+                                        />
+                                    </div>
+                                </Link>
+                                <div className="h-0.5 w-full bg-border/30" />
+                            </Fragment>
+                        ))
+                        :
+                        <div className="flex items-center justify-center w-full">
+                            <span className="flex items-center justify-center h-32 text-text text-lg">{updated}</span>
+                        </div>
+
+                    }
                 </div>
             </div>
             <div className="flex w-full text-text-muted items-center justify-center gap-4">
