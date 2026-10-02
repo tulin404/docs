@@ -33,12 +33,19 @@ export async function getRepos():
 
 // FILTERS THE GH API RESPONSE AND GETS ONLY
 export async function getUpdated(locale: Locale):
-    Promise<Repo[] | null>
+    Promise<Repo[] | string>
 {
     // ANOTHER CALL SINCE THE RES IS ALREADY CACHED ("revalidate" property)
     const repos = await getRepos();
     if (!repos) {
-        return null;
+        switch(locale) {
+            case "pt":
+                return "Os repositórios recentemente atualizados não estão disponíveis. Por favor, tente novamente mais tarde.";
+            case "en":
+                return "Recently updated repositories are currently unavailable. Please, try again later.";
+            case "es":
+                return "Los repositorios actualizados recientemente no están disponibles. Por favor, inténtelo de nuevo más tarde.";
+        };
     };
 
     const spread = [...PROJECTS, ...APIS, ...MODULES(locale), ...EXPERIMENTS(locale)];
@@ -57,7 +64,7 @@ export async function getUpdated(locale: Locale):
             name: item.name,
             html_url: repo.html_url,
             homepage: repo.homepage,
-            updated_at: repo.updated_at
+            updated_at: repo.updated_at,
         };
     });
 };
