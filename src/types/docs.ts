@@ -8,11 +8,11 @@ export type StartContent = {
     recent: string
 };
 
-export type CardContent = {
+export type StartCardContent = {
     title: string,
     desc: string,
 };
 
-export type Card = CardContent & {
+export type StartCard = StartCardContent & {
     count: number
 };
