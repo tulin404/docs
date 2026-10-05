@@ -1,4 +1,4 @@
-import { Card } from "@/components/home/Card";
+import { StartCard } from "@/components/home/StartCard";
 import { WordSlider } from "@/components/home/WordSlider";
 import { getStart } from "@/lib/content/getStart";
 import { Params } from "@/types/props";
@@ -24,8 +24,9 @@ export default async function Page({ params }: { params: Params }) {
     console.log(updated);
     // console.log(repos);
 
+    // PADDING TOP BECAUSE OF NAVBAR
     return (
-        <main className="h-dvh w-dvw flex flex-col gap-8 justify-center px-36">
+        <main className="h-dvh w-dvw flex flex-col gap-8 justify-center px-36 pt-24 pb-8 sm:pb-0 sm:pt-20">
             <div className="flex flex-col gap-3">
                 <h1 className="text-text">
                     <WordSlider content={content} />
@@ -35,7 +36,7 @@ export default async function Page({ params }: { params: Params }) {
             </div>
             <div className="flex justify-between gap-10">
                 {DOCTYPES.map((type) => (
-                    <Card
+                    <StartCard
                         key={type}
                         type={type}
                         locale={locale}
