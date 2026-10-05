@@ -58,7 +58,17 @@ export const APIS = (locale: Locale) => [
     {
         id: 1185588340,
         type: "api",
-        name: "UniFlow"
+        name: "UniFlow",
+        desc:
+            locale === "pt"
+                ?
+                ""
+                :
+            locale === "en"
+                ?
+                ""
+                :
+                ""
     }
 ];
 
@@ -76,7 +86,17 @@ export const MODULES = (locale: Locale) => [
                 ?
                 "Auth (Sessions + JWT)"
                 :
-                "Auth (Sesiones + JWT)"
+                "Auth (Sesiones + JWT)",
+        desc:
+            locale === "pt"
+                ?
+                ""
+                :
+            locale === "en"
+                ?
+                ""
+                :
+                ""
     }
 ];
 
@@ -93,7 +113,17 @@ export const EXPERIMENTS = (locale: Locale) => [
                 ?
                 "Isogram detector in GO"
                 :
-                "Detector de isogramas en Go"
+                "Detector de isogramas en Go",
+        desc:
+            locale === "pt"
+                ?
+                ""
+                :
+            locale === "en"
+                ?
+                ""
+                :
+                ""
     }
 ];
 
