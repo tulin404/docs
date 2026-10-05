@@ -62,13 +62,13 @@ export const APIS = (locale: Locale) => [
         desc:
             locale === "pt"
                 ?
-                ""
+                "Aplicação web de clima rápida e responsiva, com previsão mundial, localização automática, tradução e cache integrado."
                 :
             locale === "en"
                 ?
-                ""
+                "Aplicação web de clima rápida e responsiva, com previsão mundial, localização automática, tradução e cache integrado."
                 :
-                ""
+                "Aplicação web de clima rápida e responsiva, com previsão mundial, localização automática, tradução e cache integrado."
     }
 ];
 
