@@ -1,27 +1,28 @@
-import { getCards } from "@/lib/content/cards";
-import { CardContent, DocType } from "@/types/docs";
-import { Locale } from "@/types/props";
+import { Repo } from "@/types/api";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { Icon } from "../ui/Icon";
+import { Locale } from "@/types/props";
 
 export function Card({
+    locale,
     content
 }: {
-    content: CardContent
+    locale: Locale,
+    content: Repo
 }) {
     return (
         <Link
-            href={}
+            href={`/${locale}/${content.type}s/${content.repo_name}`}
             className="group flex flex-col flex-1 justify-between gap-6 p-5 border-2 border-border rounded-lg bg-linear-to-t from-background to-text-disabled/10 hover:border-border-hover transition-colors duration-200 hover:cursor-pointer"
         >
             <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between">
-                    <Icon type={type} size={30} />
-                    <span className="rounded-md text-text border-2 border-border px-2 py-0.5 group-hover:border-border-hover transition-colors duration-200">{content.count}</span>
+                    <Icon type={content.type} size={30} />
+                    {/*<span className="rounded-md text-text border-2 border-border px-2 py-0.5 group-hover:border-border-hover transition-colors duration-200">{content.}</span>*/}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h2 className="text-text text-xl font-medium tracking-wide">{content.title}</h2>
+                    <h2 className="text-text text-xl font-medium tracking-wide">{content.name}</h2>
                     <span className="text-text-muted">{content.desc}</span>
                 </div>
             </div>
