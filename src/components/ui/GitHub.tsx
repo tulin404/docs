@@ -1,13 +1,23 @@
-export function GitHub() {
+export function GitHub({
+    size,
+    url
+}: {
+    size: number,
+    url: string
+}) {
     return (
         <a
-            href="https://github.com/tulin404"
+            href={url}
             target="_blank"
             rel="noreferrer noopener"
+            style={{
+                width: size,
+                height: size
+            }}
             className={`
-                relative h-7
+                relative
                 dark:after:absolute dark:after:-inset-2 dark:after:-z-10 dark:after:rounded-full dark:after:bg-text/20 dark:after:blur-lg dark:after:opacity-0 dark:hover:after:opacity-100 dark:after:transition-opacity dark:after:duration-400 dark:after:delay-50
-                `}
+            `}
         >
             <svg
                 role="img"
