@@ -34,7 +34,10 @@ export async function NavBar({
             <div className="flex items-center gap-6">
                 <ChangeLang locale={locale} />
                 <ChangeTheme initialTheme={theme} />
-                <GitHub />
+                <GitHub
+                    size={30}
+                    url="https://github.com/tulin404"
+                />
             </div>
         </nav>
     );
