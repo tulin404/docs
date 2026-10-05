@@ -19,7 +19,7 @@ export class GitHub {
                     "Accept": "application/vnd.github+json",
                     "Authorization": `Bearer ${token}`,
                 },
-                next: { revalidate: 60 }
+                next: { revalidate: 300 }
             });
 
             if (!response.ok) {
@@ -101,6 +101,7 @@ export class GitHub {
                 type: item.type as DocType,
                 repo_name: repo.name,
                 name: item.name,
+                desc: item.desc,
                 html_url: repo.html_url,
                 homepage: repo.homepage,
                 updated_at: repo.updated_at,

@@ -1,10 +1,10 @@
-import { Card, DocType } from "@/types/docs";
+import { StartCard, DocType } from "@/types/docs";
 import { Locale } from "@/types/props";
 import { getDocCounts } from "./getDocCounts";
 import { APIS, EXPERIMENTS, MODULES, PROJECTS } from "@/constants";
 
 // GETS THE CARDS (/[locale]) CONTENT
-export function getStartCards(type: DocType, locale: Locale): Card {
+export function getStartCards(type: DocType, locale: Locale): StartCard {
     function getAllLangs() {
         const counts = getDocCounts();
 
