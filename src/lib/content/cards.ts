@@ -10,7 +10,7 @@ export function getStartCards(type: DocType, locale: Locale): StartCard {
 
         switch(type) {
             case "project":
-                return ({
+                return {
                     pt: {
                         title: "Projetos",
                         desc: "Sistemas e aplicações completas que construí.",
@@ -26,9 +26,9 @@ export function getStartCards(type: DocType, locale: Locale): StartCard {
                         desc: "Sistemas y aplicaciones completos que desarrollé.",
                         count: counts.projects
                     }
-                });
+                };
             case "api":
-                return ({
+                return {
                     pt: {
                         title: "APIs",
                         desc: "APIs REST e GraphQL que desenvolvi.",
@@ -44,9 +44,9 @@ export function getStartCards(type: DocType, locale: Locale): StartCard {
                         desc: "API REST y GraphQL que desarrollé.",
                         count: counts.apis
                     }
-                });
+                };
             case "module":
-                return ({
+                return {
                     pt: {
                         title: "Módulos",
                         desc: "Pacotes reutilizáveis e utilitários.",
@@ -62,9 +62,9 @@ export function getStartCards(type: DocType, locale: Locale): StartCard {
                         desc: "Paquetes reutilizables y utilitarios.",
                         count: counts.modules
                     }
-                });
+                };
             case "experiment":
-                return ({
+                return {
                     pt: {
                         title: "Experimentos",
                         desc: "Pequenos experimentos e tópicos que estou explorando.",
@@ -80,7 +80,7 @@ export function getStartCards(type: DocType, locale: Locale): StartCard {
                         desc: "Pequeños experimentos y temas que estoy explorando.",
                         count: counts.experiments
                     }
-                });
+                };
         };
     };
 
