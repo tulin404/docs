@@ -1,7 +1,6 @@
 import { Card } from "@/components/home/Card";
 import { GitHub } from "@/lib/content/github";
 import { getMainHero } from "@/lib/content/hero";
-import { translateTypes } from "@/lib/utils/translateType";
 import { DocType } from "@/types/docs";
 import { Params } from "@/types/props";
 
