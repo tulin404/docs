@@ -10,7 +10,7 @@ export function Logo({
     return (
         <Link
             href={`/${locale}`}
-            className="relative block size-[58px]"
+            className="relative block size-14.5"
         >
             <Image
                 src="/logo-light.webp"

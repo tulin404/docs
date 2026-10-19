@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: Params }) {
 
     const updated = await GitHub.getUpdated(locale);
     // const repos = await getRepos();
-    const content = getStart(locale);
+    const i18n = getStart(locale);
     const counts = getDocCounts();
     const translatedTypes = translateTypes(locale);
 
@@ -29,10 +29,10 @@ export default async function Page({ params }: { params: Params }) {
         <main className="h-dvh w-dvw flex flex-col gap-8 justify-center px-36 pt-24 pb-8 sm:pb-0 sm:pt-20">
             <div className="flex flex-col gap-3">
                 <h1 className="text-text">
-                    <WordSlider content={content} />
-                    <span className="text-2xl">{content.hero}</span>
+                    <WordSlider content={i18n} />
+                    <span className="text-2xl">{i18n.hero}</span>
                 </h1>
-                <span className="text-text-muted text-lg">{content.desc}</span>
+                <span className="text-text-muted text-lg">{i18n.desc}</span>
             </div>
             <div className="flex justify-between gap-10">
                 {DOCTYPES.map((type) => (
@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: Params }) {
             <div className="bg-border/30 h-0.5 " />
             <div className="flex flex-col gap-4">
                 <h3 className="text-lg text-text font-medium">
-                    {content.recent}
+                    {i18n.recent}
                 </h3>
                 <div className="flex flex-col gap-2.5 w-full">
                     {typeof updated !== "string"
@@ -55,7 +55,7 @@ export default async function Page({ params }: { params: Params }) {
                         updated?.map((item) => (
                             <Fragment key={item.id}>
                                 <Link
-                                    href={`/${item.type}s/${item.repo_name}`}
+                                    href={`${locale}/${item.type}s/${item.repo_name}`}
                                     className="group flex justify-between text-sm px-4"
                                 >
                                     <div className="flex items-center text-text gap-4">
@@ -87,7 +87,6 @@ export default async function Page({ params }: { params: Params }) {
                         <div className="flex items-center justify-center w-full">
                             <span className="flex items-center justify-center h-32 text-text text-lg">{updated}</span>
                         </div>
-
                     }
                 </div>
             </div>
