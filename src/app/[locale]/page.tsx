@@ -16,13 +16,11 @@ export default async function Page({ params }: { params: Params }) {
     const { locale } = await params;
 
     const updated = await GitHub.getUpdated(locale);
-    // const repos = await getRepos();
     const i18n = getStart(locale);
     const counts = getDocCounts();
     const translatedTypes = translateTypes(locale);
 
     console.log(updated);
-    // console.log(repos);
 
     // PADDING TOP BECAUSE OF NAVBAR
     return (
