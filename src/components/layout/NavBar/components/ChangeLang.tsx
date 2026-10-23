@@ -90,13 +90,15 @@ export function ChangeLang({
                 inert={!isSelecting}
             >
                 {
-                    LOCALES.filter(locale => locale !== currentLocale).map(locale =>
-                        <button
-                            key={locale}
-                            onClick={() => handleLocaleChange(locale)}
-                            className="group flex gap-2 items-center"
-                        >
-                            <ReactCountryFlag
+                    LOCALES
+                        .filter(locale => locale !== currentLocale)
+                        .map(locale =>
+                            <button
+                                key={locale}
+                                onClick={() => handleLocaleChange(locale)}
+                                className="group flex gap-2 items-center"
+                            >
+                                <ReactCountryFlag
                                 countryCode={localeToCountry(locale)}
                                 svg
                                 style={{
@@ -105,12 +107,12 @@ export function ChangeLang({
                                     borderRadius: "50%",
                                     objectFit: "cover",
                                 }}
-                            />
-                            <span className="text-text-muted group-hover:text-text transition-colors duration-200 text-lg">
-                                {locale.toUpperCase()}
-                            </span>
-                        </button>
-                    )
+                                />
+                                <span className="text-text-muted group-hover:text-text transition-colors duration-200 text-lg">
+                                    {locale.toUpperCase()}
+                                </span>
+                            </button>
+                        )
                 }
             </div>
         </div>
