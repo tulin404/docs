@@ -14,7 +14,7 @@ export function Card({
     return (
         <Link
             href={`/${locale}/${content.type}s/${content.repo_name}`}
-            className="group flex flex-col flex-1 justify-between gap-6 p-5 border-2 border-border rounded-lg bg-linear-to-t from-background to-text-disabled/10 hover:border-border-hover transition-colors duration-200 hover:cursor-pointer"
+            className="group flex flex-col flex-1 justify-between gap-6 p-5 border-2 border-border rounded-lg bg-linear-to-t from-background to-text-disabled/10 hover:border-border-hover transition-all duration-200 delay-50 hover:cursor-pointer hover:shadow-[0_0_48px_-20px_var(--color-text-disabled)]"
         >
             <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between">
