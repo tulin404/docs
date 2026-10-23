@@ -33,10 +33,10 @@ export default async function Page({ params }: { params: Params }) {
                     }
                 </div>
             </div>
-            <div className="flex self-center items-center gap-4">
-                <span className="w-8 bg-text-muted h-0.5"></span>
-                <span className="text-text-muted">{i18n.footer}</span>
-                <span className="w-8 bg-text-muted h-0.5"></span>
+            <div className="flex group self-center items-center gap-4">
+                <span className="w-8 bg-text-muted h-0.5 transition-colors duration-200 group-hover:bg-text"></span>
+                <span className="text-text-muted transition-colors duration-200 group-hover:text-text">{i18n.footer}</span>
+                <span className="w-8 bg-text-muted h-0.5 transition-colors duration-200 group-hover:bg-text"></span>
             </div>
         </main>
     );
