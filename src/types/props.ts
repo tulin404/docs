@@ -5,4 +5,5 @@ export type Theme = "light" | "dark" | undefined;
 export type Params = Promise<{
     locale: Locale,
     type: string,
+    doc: string,
 }>;
