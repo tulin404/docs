@@ -2,7 +2,6 @@ import { getDoc } from "@/lib/content/getDoc";
 import { Params } from "@/types/props";
 import { notFound } from "next/navigation";
 import { Locale } from "@/types/props";
-
 import type { Metadata } from "next";
 
 export async function generateMetadata({
